@@ -154,14 +154,13 @@ function relatedBooks(bookId, authors, books) {
     thisAuthor=getAuthorByName(author.name,authors);
     thisAuthor.books.forEach(element => {
       thisbook=getBookById(element,books);
-      //if(!result.includes(thisbook.title))
+      if(!result.includes(thisbook.title))
         result.push(thisbook.title)
     });
   })
   return result;
-
 }
-console.log(relatedBooks(46, authors, books));
+//console.log(relatedBooks(46, authors, books));
 
 /**************************************************************
  * friendliestAuthor(authors):
